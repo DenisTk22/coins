@@ -1,0 +1,11 @@
+npx create-react-app . --template typescript
+- замена порта:
+  "scripts": {
+    "start": "set PORT=7000 && react-scripts start",}
+
+npm i sass --save-dev (--save-dev - для разработки)
+
+-запуск проекта: 
+>npm run start 
+
+>npm i react-router-dom
