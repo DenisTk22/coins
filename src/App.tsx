@@ -1,13 +1,17 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/loginPage/LoginPage.tsx';
+import Layout from './components/Layout/Layout.tsx';
+import CoinsPage from './pages/coinsPage/CoinsPage.tsx';
 
 function App() {
   return (
     <Routes>
-      <Route path='/login'/>
-      <Route path='coins'>
-        <Route index/> {/**главная страница: /coins */}
-        <Route path=':coinId' /> {/**через : - :coinId будет в качестве параметра*/}
+
+      <Route path="/login" element={<LoginPage/>}/>
+      <Route path="coins" element={<Layout/>}>
+        <Route index element={<CoinsPage/>}/>
+        <Route path=":coinId" />
       </Route>
     </Routes>
   );
