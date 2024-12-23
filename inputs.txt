@@ -9,3 +9,8 @@ npm i sass --save-dev (--save-dev - для разработки)
 >npm run start 
 
 >npm i react-router-dom
+>npm i @mui/material @emotion/react @emotion/styled
+
+в index.html в head:
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
