@@ -26,7 +26,7 @@ const createCoin = (id: number, year: number, coinValue: string, currency: strin
         id, year, coinValue, currency, coinForm, coinEdge, metal, country, period, mint, mintMark, qaulity, specialMarks, noteL, dateAdded
     });
 
-const rows = [
+export const rows = [
     createCoin(101001, 1878, '5', 'копейка', 'круглая', 'рубчатый', 'медь', 'Императорская Россия', 'Александр III', '', '', 'VF', 'Без повреждений', '', new Date()),
     createCoin(101002, 1800, '1', 'копейка', 'круглая', 'рубчатый', 'медь', 'Императорская Россия', 'Павел I', '', '', 'VF', 'Без повреждений', '', new Date()),
     createCoin(101003, 1710, '1', 'полушка', 'круглая', 'гладкий', 'медь', 'Императорская Россия', 'Петр I', '', '', 'VF', 'Без повреждений', '', new Date()),

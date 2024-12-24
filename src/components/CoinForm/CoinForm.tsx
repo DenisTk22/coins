@@ -14,6 +14,7 @@ interface ICoinFormProps {
 
 function CoinForm({ open, onClose, onSubmit, edit }: ICoinFormProps) {
     const formTypeText = edit ? 'Изменить' : 'Добавить'
+    const formTitle = edit ? 'Изменить данные' : 'Добавить монету'
     const submitAndClose = () => {
         onSubmit()
         onClose()
@@ -24,7 +25,7 @@ function CoinForm({ open, onClose, onSubmit, edit }: ICoinFormProps) {
 
     return (
         <Dialog open={open} onClose={onClose}>
-            <DialogTitle>{formTypeText} данные</DialogTitle>
+            <DialogTitle>{formTitle}</DialogTitle>
             <DialogContent sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px', alignItems: 'center' }}>
                 <div>
                     <TextField label='Год' variant="outlined" fullWidth margin="normal" />
@@ -49,7 +50,7 @@ function CoinForm({ open, onClose, onSubmit, edit }: ICoinFormProps) {
                             value={date}
                             onChange={setDate}
                             renderLoading={() => <TextField fullWidth margin="normal" />}
-                            // renderInput={params => <TextField {...params} fullWidth margin="normal" />}
+                        // renderInput={params => <TextField {...params} fullWidth margin="normal" />}
                         />
                     </LocalizationProvider>
                     <TextField label='Особые отметки' variant="outlined" fullWidth margin="normal" multiline rows={6} />

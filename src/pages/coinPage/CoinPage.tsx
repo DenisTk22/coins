@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import CoinForm from "../../components/CoinForm/CoinForm.tsx";
 import dayjs from "dayjs";
+import { rows } from "../coinsPage/CoinsPage.tsx";
 
 function CoinPage() {
     // eslint-disable-next-line no-lone-blocks
@@ -39,7 +40,15 @@ function CoinPage() {
                         {dayjs().format('DD-MM-YYYY')}
                     </Typography>
                     <Typography component='p' variant="body1" sx={{ mt: 2 }}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatibus maxime velit fuga excepturi provident quod magnam quisquam nisi totam officiis beatae exercitationem nesciunt, mollitia et odit sint pariatur at?
+                        {rows.map(row => {
+                            if (row.id === coinId) {
+                                return (
+                                    <p>
+                                        Монета {row.coinValue} {row.currency} год чеканки {row.year}
+                                    </p>
+                                )
+                            }
+                        })}
                     </Typography>
                 </Box>
             </Box>
